@@ -38,9 +38,6 @@ public class Titular {
         return cuentaBancariaMap;
     }
 
-    public void setCuentaBancariaMap(Map<String, CuentaBancaria> cuentaBancariaMap) {
-        this.cuentaBancariaMap = cuentaBancariaMap;
-    }
 
     public void visualizarCuentas() {
         cuentaBancariaMap.forEach((k,v) ->{

@@ -7,6 +7,10 @@ public class Apunte {
     private Calendar fecha = Calendar.getInstance();
     private CuentaBancaria cuentaBancaria;
 
+    public Apunte (double cantidad) {
+        this.cantidad = cantidad;
+    }
+
     public double getCantidad() {
         return cantidad;
     }
