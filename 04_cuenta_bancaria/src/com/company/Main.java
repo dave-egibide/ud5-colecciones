@@ -95,6 +95,7 @@ public class Main {
                                     innerInput = br.readLine();
                                     if (cuentaBancariaMap.containsKey(innerInput)) {
                                         cuentaBancariaMap.get(innerInput).desvincularTitulares(innerInput);
+                                        cuentaBancariaMap.get(innerInput).eliminarApuntes();
                                         cuentaBancariaMap.remove(innerInput);
                                         System.out.println("Cuenta eliminada correctamente.");
                                     }

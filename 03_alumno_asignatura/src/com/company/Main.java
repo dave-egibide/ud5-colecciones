@@ -21,11 +21,12 @@ public class Main {
                     "4.  Listado de alumnos matriculados en una asignatura.\n" +
                     "5.  Listado de asignaturas en las que está matriculado un alumno y total de horas.\n" +
                     "6.  Salir\n" +
-                            "Introduzca opción: ");
+                    "Introduzca opción: ");
             input = br.readLine();
 
             switch (Integer.parseInt(input)) {
                 case 1:
+                    //nuevo alumno
                     Alumno alumno = new Alumno();
                     System.out.print("Introduzca el nombre del alumno: ");
                     alumno.setNombre(br.readLine());
@@ -36,6 +37,7 @@ public class Main {
                     alumnos.add(alumno);
                     break;
                 case 2:
+                    //nueva asignatura
                     Asignatura asignatura = new Asignatura();
                     System.out.print("Introduzca el nombre de la asignatura: ");
                     asignatura.setNombre(br.readLine());
@@ -44,6 +46,7 @@ public class Main {
                     asignaturas.add(asignatura);
                     break;
                 case 3:
+                    //matricular alumno
                     visualizarNombreAlumnos(alumnos);
                     System.out.print("Introduzca el número del alumno a matricular: ");
                     int numAlumno = Integer.parseInt(br.readLine());
@@ -52,11 +55,13 @@ public class Main {
                     alumnos.get(numAlumno - 1).addAsignatura(asignaturas.get(Integer.parseInt(br.readLine()) - 1));
                     break;
                 case 4:
+                    //alumnos en asignatura
                     visualizarNombreAsignaturas(asignaturas);
                     System.out.print("Introduzca el número de la asignatura: ");
                     asignaturas.get(Integer.parseInt(br.readLine()) - 1).visualizarAlumnos();
                     break;
                 case 5:
+                    //asignaturas de alumno
                     visualizarNombreAlumnos(alumnos);
                     System.out.print("Introduzca el número de alumno: ");
                     alumnos.get(Integer.parseInt(br.readLine()) - 1).visualizarAsignaturasYTotal();

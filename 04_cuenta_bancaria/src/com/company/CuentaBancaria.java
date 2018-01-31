@@ -46,4 +46,8 @@ public class CuentaBancaria {
     public void desvincularTitulares(String numCuenta) {
         titularMap.forEach((k,v) -> titularMap.get(k).getCuentaBancariaMap().remove(numCuenta));
     }
+
+    public void eliminarApuntes() {
+        apuntes.forEach(ub -> ub.setCuentaBancaria(null));
+    }
 }
